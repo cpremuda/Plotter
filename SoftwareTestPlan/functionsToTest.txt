@@ -1,0 +1,34 @@
+Plotting a linear function
+
+Plotting a quadratic function
+
+Plotting a polynomial function
+
+Draw button (updates the graph)
+
+Zooming in
+
+Zooming out
+
+Integral Panel *****(Enya)
+	Changing x1 and x2 values
+	Trapezium
+	Simpson
+	Gauss
+	
+Showing/hiding degree of freedom (correct for different types of functions) *****(Enya)
+
+Position indicator (bottom right corner)
+
+Moving around the graph 
+	Click and drag
+	Using arrows
+	
+Visualization *****(Connor)
+	Cartesian 2D
+	Polar 2D
+	Cartesian 3D
+	
+Changing colors (test different components change to correct colors) *****(Connor)
+
+Saving and/or exporting a graph
