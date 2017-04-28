@@ -27,20 +27,33 @@ public class AdvancedCalculator {
 		
 		double x1=calc.a;
 		double x2=calc.b;
+		double dx = (x2-x1)/6.0;
+				
+//		int num=1000;
+//		
+//		double dx=(x2-x1)/num;
+//		double dx_6=dx/6.0;
 		
-		int num=1000;
+//		for(double x=x1;x<x2;x=x+dx){
+//		
+//		 //total+=dx*(calc.f(x)+calc.f(x+dx)+4*calc.f((x*2+dx)/2.0))/6.0;
+//		 total+=calc.f(x)+calc.f(x+dx)+4*calc.f((x*2+dx)*0.5);
+//		}
+//		
+//		
+//		return total*dx_6;
 		
-		double dx=(x2-x1)/num;
-		double dx_6=dx/6.0;
+		int multiplier = 4;
+		total+=calc.f(x1) + calc.f(x2);
 		
-		for(double x=x1;x<x2;x=x+dx){
-		
-		  //total+=dx*(calc.f(x)+calc.f(x+dx)+4*calc.f((x*2+dx)/2.0))/6.0;
-		 total+=calc.f(x)+calc.f(x+dx)+4*calc.f((x*2+dx)*0.5);
+		for(double x=x1+dx; x<=x2-dx; x+=dx){
+			total+=multiplier*calc.f(x);
+			if(multiplier==4)
+				multiplier=2;
+			else 
+				multiplier=4;
 		}
-		
-		
-		return total*dx_6;
+		return (1.0/3.0)*dx*total;
 	
 	}
 	
@@ -52,19 +65,27 @@ public class AdvancedCalculator {
 		double x1=calc.a;
 		double x2=calc.b;
 		
-		int num=1000;
+//		int num=1000;
+//		
+//		double dx=(x2-x1)/num;
+//		double dx_2=dx/2;
+//		
+//		for(double x=x1;x<x2;x=x+dx){
+//		
+//		  //total+=dx*(calc.f(x+dx)-calc.f(x-dx))/2;	
+//			total+=(calc.f(x+dx)+calc.f(x));
+//		}
+//		
+//		
+//		return total*dx_2;
 		
-		double dx=(x2-x1)/num;
-		double dx_2=dx/2;
-		
-		for(double x=x1;x<x2;x=x+dx){
-		
-		  //total+=dx*(calc.f(x+dx)-calc.f(x-dx))/2;	
-			total+=(calc.f(x+dx)+calc.f(x));
+		double dx=(x2-x1)/6.0;
+		total+=calc.f(x1) + calc.f(x2);
+		for(double x=x1+dx; x<=x2-dx;x+=dx)
+		{
+			total+=2*calc.f(x);
 		}
-		
-		
-		return total*dx_2;
+		return (dx/2.0)*total;
 	
 	}
 
