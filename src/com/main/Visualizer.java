@@ -66,7 +66,7 @@ public class Visualizer extends JFrame implements ActionListener,KeyListener,
 	public static int BUTTOMBORDER=100;
 	public static int UPBORDER=40;
 	public static int LEFTBORDER=0;
-	public static int RIGHTBORDER=150;
+	public static int RIGHTBORDER=250;
 	private JPanel right;
 	public JTextField displayedFunction;
 	public JTextField displayedA;
@@ -312,13 +312,13 @@ public class Visualizer extends JFrame implements ActionListener,KeyListener,
 		add(up);
 		
 		JLabel flabel = new JLabel("Displayed function: y=");
-		flabel.setBounds(5,5,130,20);
+		flabel.setBounds(5,5,200,20);
 		up.add(flabel);
 		
 		displayedFunction=new FunctionTextField();
 		displayedFunction.addKeyListener(this);
 		//displayedFunction.setEditable(false);
-		displayedFunction.setBounds(140,5,400,20);
+		displayedFunction.setBounds(150,5,400,20);
 		displayedFunction.addFocusListener(this);
 		
 		up.add(displayedFunction);
@@ -339,13 +339,13 @@ public class Visualizer extends JFrame implements ActionListener,KeyListener,
 			
 			add(up);
 			JLabel flabel = new JLabel("Displayed function: r(teta)=");
-			flabel.setBounds(5,5,160,20);
+			flabel.setBounds(5,5,200,20);
 			up.add(flabel);
 			
 			displayedFunction=new FunctionTextField();
 			displayedFunction.addKeyListener(this);
 			//displayedFunction.setEditable(false);
-			displayedFunction.setBounds(170,5,400,20);
+			displayedFunction.setBounds(180,5,400,20);
 			displayedFunction.addFocusListener(this);
 			up.add(displayedFunction);
 			
@@ -366,13 +366,13 @@ public class Visualizer extends JFrame implements ActionListener,KeyListener,
 			add(up);
 			
 			JLabel flabel = new JLabel("Displayed function: z(x,y)=");
-			flabel.setBounds(5,5,150,20);
+			flabel.setBounds(5,5,180,20);
 			up.add(flabel);
 			
 			displayedFunction=new FunctionTextField();
 			displayedFunction.addKeyListener(this);
 			//displayedFunction.setEditable(false);
-			displayedFunction.setBounds(160,5,400,20);
+			displayedFunction.setBounds(180,5,400,20);
 			displayedFunction.addFocusListener(this);
 			
 			up.add(displayedFunction);
@@ -455,7 +455,7 @@ public class Visualizer extends JFrame implements ActionListener,KeyListener,
 			
 		
 		JLabel rlabel = new JLabel("Displayed range:");
-		rlabel.setBounds(5,60,100,20);
+		rlabel.setBounds(5,60,150,20);
 		right.add(rlabel);
 		
 		JLabel alabel = new JLabel("a:");
@@ -692,6 +692,9 @@ public class Visualizer extends JFrame implements ActionListener,KeyListener,
 	 */
 	public void actionPerformed(ActionEvent arg0) {
 		
+		System.out.println("--------------> " + arg0);
+		System.out.println("--------------> source = " + arg0.getSource());
+		
 		Object o=arg0.getSource();
 		
 		if(o==draw || o==jmt2 )
@@ -868,7 +871,6 @@ public class Visualizer extends JFrame implements ActionListener,KeyListener,
 
 
 	private void setColors(Properties p2) {
-		
 		setInitColors(p2);
 		
 		center.setBackground(BACKGROUND_COLOR);

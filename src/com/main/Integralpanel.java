@@ -44,7 +44,7 @@ public class Integralpanel extends JDialog implements ActionListener{
         int r=30;
         
         JLabel rlabel = new JLabel("Calculated range:");
-		rlabel.setBounds(5,10,100,20);
+		rlabel.setBounds(5,10,120,20);
 		pan.add(rlabel);
 		JLabel alabel = new JLabel("x1:");
 		alabel.setBounds(5,r,20,20);
