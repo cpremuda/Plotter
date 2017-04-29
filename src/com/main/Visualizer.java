@@ -66,7 +66,7 @@ public class Visualizer extends JFrame implements ActionListener,KeyListener,
 	public static int BUTTOMBORDER=100;
 	public static int UPBORDER=40;
 	public static int LEFTBORDER=0;
-	public static int RIGHTBORDER=150;
+	public static int RIGHTBORDER=250;
 	private JPanel right;
 	public JTextField displayedFunction;
 	public JTextField displayedA;
@@ -455,7 +455,7 @@ public class Visualizer extends JFrame implements ActionListener,KeyListener,
 			
 		
 		JLabel rlabel = new JLabel("Displayed range:");
-		rlabel.setBounds(5,60,100,20);
+		rlabel.setBounds(5,60,150,20);
 		right.add(rlabel);
 		
 		JLabel alabel = new JLabel("a:");
