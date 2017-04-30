@@ -1,5 +1,6 @@
 package com.maths;
 
+import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
@@ -318,11 +319,13 @@ public class Calculator extends Renderer3D{
 	 */
 	public void drawX0axis(Graphics2D graphics2D, int i, int j) {
 		
-		
+		graphics2D.setStroke(new BasicStroke(5));
+
 		if(y0>=0 && y0<j)
 			graphics2D.drawLine(0,j-y0,i,j-y0);
 		
-		
+		graphics2D.setStroke(new BasicStroke(1));
+
 		
 
 		
@@ -359,9 +362,11 @@ public class Calculator extends Renderer3D{
 	
 	public void drawy0axis(Graphics2D graphics2D, int i, int j) {
 		
+		graphics2D.setStroke(new BasicStroke(5));
 		if(y0>=0 && y0<j)
 			graphics2D.drawLine(x0,0,x0,j);
-		
+		graphics2D.setStroke(new BasicStroke(1));
+
 		DecimalFormat df=new DecimalFormat("##.##");
 		
 
@@ -395,7 +400,7 @@ public class Calculator extends Renderer3D{
 		
 			
 		
-		
+
 		
 	}
 	
